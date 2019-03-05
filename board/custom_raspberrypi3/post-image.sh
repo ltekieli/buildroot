@@ -58,4 +58,14 @@ genimage                           \
 	--outputpath "${BINARIES_DIR}" \
 	--config "${GENIMAGE_CFG}"
 
+SOURCE_DATE_EPOCH=$(git log --pretty=%ct -n1)
+
+tar -c -C ${BINARIES_DIR} \
+    --sort=name \
+    --mtime="@${SOURCE_DATE_EPOCH}" \
+    --owner=0 \
+    --group=0 \
+    --numeric-owner \
+    bcm2710-rpi-3-b-plus.dtb rootfs.tar rpi-firmware zImage | gzip -m > "${BINARIES_DIR}"/system.tar.gz
+
 exit $?
