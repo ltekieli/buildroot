@@ -1,0 +1,6 @@
+steps:
+  - trigger: "buildroot-check"
+    label: "Build"
+  - wait
+  - command: ".buildkite/release.sh"
+
