@@ -1,0 +1,6 @@
+steps:
+  - label: 'Rebase build and merge'
+    commands:
+      - "make distclean"
+      - "make custom_raspberrypi3_defconfig"
+      - "make"
