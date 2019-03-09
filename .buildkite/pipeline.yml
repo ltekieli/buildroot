@@ -1,0 +1,6 @@
+steps:
+  - label: 'Build'
+    commands:
+      - "make distclean"
+      - "make custom_raspberrypi3_defconfig"
+      - "make"
