@@ -1,7 +1,6 @@
 steps:
-  - label: "Build"
-    command: ".buildkite/build.sh"
-  - wait
-  - label: "Release"
-    command: ".buildkite/release.sh"
+  - label: "Build & Release"
+    commands:
+      - ".buildkite/build.sh"
+      - ".buildkite/release.sh"
 
