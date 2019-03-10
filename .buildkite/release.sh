@@ -10,5 +10,4 @@ github-release \
     output/images/arm-buildroot-linux-gnueabihf_sdk-buildroot.tar.gz \
     output/images/system.tar.gz \
     --github-repository "ltekieli/buildroot" \
-    --github-access-token "$token" \
-    --commit "$tag_name"
+    --github-access-token "$token"
